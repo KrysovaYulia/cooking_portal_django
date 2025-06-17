@@ -1,0 +1,11 @@
+{% if messages %}
+<div class="massage">
+    {% for massage in messages %}
+
+        <div class="alert alert-{% if massage.tags == 'error' %}danger{% else %}{{ massage.tags}}{% endif %} " role="alert">
+            {{ massage }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endif %}
